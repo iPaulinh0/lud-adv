@@ -11,6 +11,9 @@ export function Contact() {
         <Inputs type="number" placeholder="Número de telefone" label="WhatsApp" htmlForLabel="number"/>
         <Inputs type="email" placeholder="Seu melhor e-mail para contato" label="E-mail" htmlForLabel="email"/>
         <SelectionField />
+        <button type="submit" className="w-[37.5rem] py-4 bg-gradient-to-r from-orange to-sun-orange rounded-lg font-bold text-gray-100 text-2xl">
+          Enviar
+        </button>
       </form>
     </div>
   )

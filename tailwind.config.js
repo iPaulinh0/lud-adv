@@ -9,6 +9,7 @@ export default {
       'blue-night': '#070c18',
       'blue-dark-sky': '#0E182F',
       'blue-sky': '#1c3168',
+      'orange': '#CC6D28',
       'sun-orange': '#FFB800',
       'indigo-blue': '#495f95',
       'green': '#726e4b',
