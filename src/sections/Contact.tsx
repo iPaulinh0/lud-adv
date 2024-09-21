@@ -3,8 +3,8 @@ import { SelectionField } from "../components/SelectionField";
 
 export function Contact() {
   return(
-    <div className="flex flex-col mt-16 gap-9 items-center w-screen">
-      <h1 className="font-bold text-[2rem] text-gray-200">ENRTRE EM CONTATO</h1>
+    <div className="flex flex-col mt-16 gap-9 items-center w-screen h-screen">
+      <h1 className="font-bold text-[2rem] text-gray-200">ENTRE EM CONTATO</h1>
 
       <form>
         <Inputs type="text" placeholder="Insira seu nome completo" label="Nome" htmlForLabel="name"/>

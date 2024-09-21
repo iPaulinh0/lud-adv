@@ -1,4 +1,5 @@
 import { Contact } from "./sections/Contact";
+import { Footer } from "./sections/Footer";
 import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
 import { Services } from "./sections/Services";
@@ -10,6 +11,7 @@ export function App() {
       <Hero />
       <Services />
       <Contact />
+      <Footer />
     </div>
   )
 }

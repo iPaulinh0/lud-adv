@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Poppins', 'system-ui']
+    },
     colors: {
       'blue-night': '#070c18',
       'blue-dark-sky': '#0E182F',
