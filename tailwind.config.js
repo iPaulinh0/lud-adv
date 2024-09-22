@@ -5,6 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: '570px',
+      sm: '780px',
+      md: '1000px',
+      lg: '1240px',
+      xl: '1440px',
+    },
+
     fontFamily: {
       'sans': ['Poppins', 'system-ui']
     },
