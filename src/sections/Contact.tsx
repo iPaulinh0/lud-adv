@@ -1,10 +1,26 @@
-import { Inputs } from "../components/Inputs";
-import { SelectionField } from "../components/SelectionField";
+// import { Inputs } from "../components/Inputs";
+// import { SelectionField } from "../components/SelectionField";
+
+import { useEffect } from "react";
+import Embed from "react-embed";
 
 export function Contact() {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  
   return(
-    <div className="flex flex-col mt-16 gap-9 items-center w-screen h-screen">
-      <h1 className="font-bold text-[2rem] text-gray-200">ENTRE EM CONTATO</h1>
+    <div className="flex flex-col mt-16 gap-9 items-center w-screen mb-16">
+      <div data-tf-live="01J8DMN2JM8XBVG1WTSYJCHT1J"></div>
+      {/* <h1 className="font-bold text-[2rem] text-gray-200">ENTRE EM CONTATO</h1>
 
       <form>
         <Inputs type="text" placeholder="Insira seu nome completo" label="Nome" htmlForLabel="name"/>
@@ -27,7 +43,7 @@ export function Contact() {
           >
           Enviar
         </button>
-      </form>
+      </form> */}
     </div>
   )
 }
