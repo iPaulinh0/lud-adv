@@ -1,9 +1,15 @@
 export function Navbar() {
   return(
-    <div className="w-[20rem] h-12 bg-gradient-to-r from-gray-100/15 to-gray-100/75 rounded-full p-13 flex gap-12 justify-center items-center max-[1000px]:hidden">
-      <a href="#" className="font-bold text-base text-gray-200 active:shadow-xl active:bg-gradient-to-r active:from-gray-100 active:to-gray-400 active:rounded-full active:py-1 active:px-4 active:text-gray-950">Início</a>
-      <a href="#" className="font-bold text-base text-gray-200">Serviços</a>
-      <a href="#" className="font-bold text-base text-gray-200">Contato</a>
+    <div className="flex justify-center items-center gap-10 max-[1000px]:hidden">
+      <a href="#" className="font-medium flex items-center gap-2 text-base text-sand-50 border-b border-indigo-blue border-hidden hover:border-solid hover:text-indigo-blue transition-all">
+        Início
+      </a>
+      <a href="#" className="font-medium text-base text-sand-50 border-b border-indigo-blue border-hidden hover:border-solid hover:text-indigo-blue transition-all">
+        Serviços
+      </a>
+      <a href="#" className="font-medium text-base text-sand-50 border-b border-indigo-blue border-hidden hover:border-solid hover:text-indigo-blue transition-all">
+        Contato
+      </a>
     </div>
   )
 }
