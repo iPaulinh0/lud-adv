@@ -10,11 +10,11 @@ export function Hero() {
      >
       <img src={MainIMG} alt="Advogada Ludmila com mão embaixo do queixo." className='w-80 border border-sand rounded-br-md rounded-tr-md rounded-tl-md max-md:w-64'/>
       <div className='hidden max-sm:flex max-sm:flex-col max-sm:items-center max-sm:my-4'>
-        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[391px]:text-sm'>Ludmila Oliveira Amazonas | OAB/AM: 0000</p>
+        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[391px]:text-sm'>Ludmila Oliveira Amazonas</p>
         <p className='font-bold text-xl text-gray-200 max-md:text-base max-[391px]:text-sm'>Manaus | AM</p>
       </div>
       <div>
-        <p className='text-base w-[35rem] h-[12rem] text-gray-100 italic
+        <p className='text-base w-[35rem] h-[12rem] text-gray-100 italic mb-8
           max-md:text-xs
           max-md:w-[24rem]
           max-md:h-[8rem]
@@ -29,17 +29,15 @@ export function Hero() {
           max-[391px]:text-8px
           '
           >
-          Lorem ipsum dolor sit <strong className='font-bold text-indigo-blue'>amet</strong>, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat, Duis autre irure dolor in
-          reprehenderit in <strong className='font-bold text-indigo-blue'>voluptate velit</strong> esse cillum dolore eu fugiat nulla {' '}
-          <strong className='font-bold text-indigo-blue'>pariatur</strong>. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Me chamo Ludmila Oliveira Amazonas, advogada <strong className='font-semibold text-indigo-blue'>formada em Direito</strong> pela FAMETRO, e <strong className='font-semibold text-indigo-blue'>pós-graduanda em Direito Civil</strong>,
+          Atuo nas áreas de direito do consumidor, família e serviços extrajudiciais, onde posso usar minha <strong className='font-semibold text-indigo-blue'>proatividade</strong> e <strong className='font-semibold text-indigo-blue'>criatividade </strong> 
+          para solucionar os problemas das pessoas, especialmente nos momentos em que mais precisam.
+          Sempre busco entender as situações com sensibilidade, conectando cada detalhe para oferecer um apoio verdadeiro e próximo aos meus clientes.
+
         </p>
         <div className='flex gap-8 items-center mb-2 max-md:gap-4 max-sm:hidden'>
           <User weight='fill' className='text-indigo-blue text-[32px] max-md:text-[20px]'/>
-          <p className='font-bold text-xl text-gray-200 max-md:text-base'>Ludmila Oliveira Amazonas | OAB/AM: 0000</p>
+          <p className='font-bold text-xl text-gray-200 max-md:text-base'>Ludmila Oliveira Amazonas</p>
         </div>
         <div className='flex gap-8 items-center max-md:gap-4 max-sm:hidden'>
           <MapPin weight='fill' className='text-indigo-blue text-[32px] max-md:text-[20px]'/>
