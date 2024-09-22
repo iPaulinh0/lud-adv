@@ -20,7 +20,7 @@ export function Consumer() {
               partilha de bens, união estável, <br/>
               casamento e regime de bens...
             </p>
-            <Drawer>
+            <Drawer disablePreventScroll noBodyStyles>
               <DrawerTrigger
                 className="font-medium text-indigo-blue flex items-center gap-2 border-b border-blue-dark-sky/0
                   hover:text-blue-dark-sky mt-4 
