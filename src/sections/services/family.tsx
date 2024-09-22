@@ -14,8 +14,8 @@ export function Family() {
               partilha de bens, união estável, <br/>
               casamento e regime de bens...
             </p>
-            <Drawer disablePreventScroll noBodyStyles>
-              <DrawerTrigger
+            <Drawer>
+              <DrawerTrigger onClick={() => window.scrollTo(0,0)}
                 className="font-medium text-indigo-blue flex items-center gap-2 border-b border-blue-dark-sky/0
                   hover:text-blue-dark-sky mt-4 
                   hover:border-blue-dark-sky/100 
