@@ -1,5 +1,5 @@
 import Logo from '../../public/logo.svg'
-import { InstagramLogo, WhatsappLogo } from 'phosphor-react'
+import { InstagramLogo, LinkedinLogo, WhatsappLogo } from 'phosphor-react'
 
 
 export function Footer() {
@@ -9,10 +9,13 @@ export function Footer() {
       <div className='flex gap-36 items-center mb-5 max-[450px]:flex-col max-[450px]:gap-3 max-[450px]:mb-1'>
         <img src={Logo} alt="Logotipo Ludmila Advogada dourado" className='w-40' />
         <nav className='flex flex-row gap-2'>
+          <a href="https://www.linkedin.com/in/ludmila-oliveira-amazonas-1a022b213/">
+            <LinkedinLogo weight='fill' size={35} className='text-sand-100'/>
+          </a>
           <a href="#">
             <InstagramLogo weight='fill' size={35} className='text-sand-100'/>
           </a>
-          <a href="">
+          <a href="#">
             <WhatsappLogo weight='fill' size={35} className='text-sand-100'/>
           </a>
         </nav>
