@@ -1,6 +1,8 @@
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import Logo from '../../public/logo.svg'
 import { Navbar } from '../components/Navbar'
 import { List } from 'phosphor-react'
+import { Separator } from '@/components/ui/separator'
 
 export function Header() {
   return (
@@ -9,9 +11,19 @@ export function Header() {
       <div className='max-[1000px]:hidden'></div>
       <img src={Logo} alt="Ludmila Advogada logo dourada" className='w-40'/>
       <Navbar />
-      <button className='hidden max-[1000px]:block'>
-        <List size={36} className='text-sand-100'/>
-      </button>
+      <Popover>
+        <PopoverTrigger className='hidden max-md:block'>
+          <List size={36} className='text-sand-100 focus:hidden'/>
+        </PopoverTrigger>
+
+        <PopoverContent className='flex flex-col justify-center gap-2 bg-blue-night w-32 h-36'>
+          <a href="#home" className='text-sand-50'>Início</a>
+          <Separator className='text-sand-50'/>
+          <a href="#services" className='text-sand-50'>Serviços</a>
+          <Separator className='text-sand-50'/>
+          <a href="#contact" className='text-sand-50'>Contato</a>
+        </PopoverContent>
+      </Popover>
     </div>
   )
 }

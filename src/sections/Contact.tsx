@@ -17,7 +17,7 @@ export function Contact() {
   }, []);
   
   return(
-    <div className="flex flex-col mt-16 gap-9 items-center w-screen mb-16">
+    <div id="contact" className="flex flex-col mt-16 gap-9 items-center w-screen mb-16">
       <div data-tf-live="01J8DMN2JM8XBVG1WTSYJCHT1J"></div>
       {/* <h1 className="font-bold text-[2rem] text-gray-200">ENTRE EM CONTATO</h1>
 

@@ -3,7 +3,7 @@ import { User, MapPin } from 'phosphor-react'
 
 export function Hero() {
   return (
-    <div className='w-screen max-w-[1200px] items-center my-16 flex justify-between max-lg:max-w-[976px]
+    <div id='home' className='w-screen max-w-[1200px] items-center my-16 flex justify-between max-lg:max-w-[976px]
      max-md:max-w-[768px]
      max-sm:flex-col
      '
