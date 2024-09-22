@@ -11,6 +11,7 @@ export function SelectionField() {
             max-md:w-[30rem]
             max-[480px]:w-[24rem]
             max-[391px]:w-[20rem]
+            max-[391px]:h-[58px]
             max-[350px]:w-[16rem]
             max-[350px]:text-xs
             "
