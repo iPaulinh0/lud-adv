@@ -8,7 +8,7 @@ export function Consumer() {
   function handleOverbooking() {
     toast.info(
       'Overbooking, ou preterição de embarque, é uma situação que ocorre quando uma companhia aérea vende mais bilhetes do que a capacidade da aeronave.',
-      {duration: 7500}
+      {duration: 15000}
     )
   }
 
