@@ -10,8 +10,8 @@ export function Hero() {
      >
       <img src={MainIMG} alt="Advogada Ludmila com mão embaixo do queixo." className='w-80 border border-sand rounded-br-md rounded-tr-md rounded-tl-md max-md:w-64'/>
       <div className='hidden max-sm:flex max-sm:flex-col max-sm:items-center max-sm:my-4'>
-        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[385px]:text-sm'>Ludmila Oliveira Amazonas | OAB/AM: 0000</p>
-        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[385px]:text-sm'>Manaus | AM</p>
+        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[391px]:text-sm'>Ludmila Oliveira Amazonas | OAB/AM: 0000</p>
+        <p className='font-bold text-xl text-gray-200 max-md:text-base max-[391px]:text-sm'>Manaus | AM</p>
       </div>
       <div>
         <p className='text-base w-[35rem] h-[12rem] text-gray-100 italic
@@ -25,8 +25,8 @@ export function Hero() {
           max-sm:mb-16
           max-xs:text-xs
           max-xs:w-[24rem]
-          max-[385px]:w-[20rem]
-          max-[385px]:text-8px
+          max-[391px]:w-[20rem]
+          max-[391px]:text-8px
           '
           >
           Lorem ipsum dolor sit <strong className='font-bold text-indigo-blue'>amet</strong>, consectetur adipiscing elit, sed do

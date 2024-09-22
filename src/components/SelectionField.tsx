@@ -1,7 +1,7 @@
 export function SelectionField() {
   return(
     <div className="flex flex-1 flex-col gap-2 mb-9">
-      <label htmlFor="services" className="font-bold text-xl text-gray-200">Serviço</label>
+      <label htmlFor="services" className="font-bold text-xl text-gray-200 max-[391px]:text-base">Serviço</label>
       <select id="services"
         className="
           bg-blue-dark-sky border border-indigo-blue
@@ -10,7 +10,9 @@ export function SelectionField() {
             focus:outline-none focus:border-sun-orange
             max-md:w-[30rem]
             max-[480px]:w-[24rem]
-            max-[385px]:w-[20rem]
+            max-[391px]:w-[20rem]
+            max-[350px]:w-[16rem]
+            max-[350px]:text-xs
             "
         >
           <option selected>Selecione o serviço desejado</option>

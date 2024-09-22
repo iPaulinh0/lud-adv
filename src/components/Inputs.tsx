@@ -8,7 +8,7 @@ interface InputFieldProps {
 export function Inputs({ label, placeholder, type, htmlForLabel }: InputFieldProps) {
   return(
     <div className="flex flex-1 flex-col gap-2 mb-9">
-      <label htmlFor={htmlForLabel} className="font-bold text-xl text-gray-200 max-[]:text-base">{label}</label>
+      <label htmlFor={htmlForLabel} className="font-bold text-xl text-gray-200 max-[391px]:text-base">{label}</label>
       <input 
         id={htmlForLabel}
         placeholder={placeholder}
@@ -22,7 +22,9 @@ export function Inputs({ label, placeholder, type, htmlForLabel }: InputFieldPro
           max-md:w-[30rem]
           max-md:h-3
           max-[480px]:w-[24rem]
-          max-[385px]:w-[20rem]
+          max-[391px]:w-[20rem]
+          max-[350px]:w-[16rem]
+          max-[350px]:text-xs
         "
       />
     </div>
