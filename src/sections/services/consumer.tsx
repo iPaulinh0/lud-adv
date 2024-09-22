@@ -6,14 +6,17 @@ import { toast } from "sonner";
 export function Consumer() {
 
   function handleOverbooking() {
-    toast.info('Overbooking, ou preterição de embarque, é uma situação que ocorre quando uma companhia aérea vende mais bilhetes do que a capacidade da aeronave.')
+    toast.info(
+      'Overbooking, ou preterição de embarque, é uma situação que ocorre quando uma companhia aérea vende mais bilhetes do que a capacidade da aeronave.',
+      {duration: 7500}
+    )
   }
 
   return(
     <div className="flex flex-col items-center justify-center max-sm:flex-row max-[450px]:flex-col">
             <div className="flex flex-col items-center gap-7 max-sm:gap-1 max-sm:mr-10 max-[450px]:mr-0">
               <ShoppingBag weight="fill" className="text-blue-sky text-[80px] max-lg:text-[40px]" />
-              <h2 className="font-bold text-xl text-blue-sky uppercase text-center mb-2 tracking-widest max-lg:text-lg max-md:text-base max-xs:text-sm">Direito de <br /> Familia</h2>
+              <h2 className="font-bold text-xl text-blue-sky uppercase text-center mb-2 tracking-widest max-lg:text-lg max-md:text-base max-xs:text-sm">Direito do <br /> Consumidor</h2>
             </div>
             <p className="text-base text-blue-sky italic text-center max-w-80 max-lg:text-xs max-sm:text-base max-xs:text-xs max-[890px]:hidden">
               Pensão alimentícia, guarda de filhos, <br/>
