@@ -10,4 +10,7 @@
   input[type="number"] {
     appearance: textfield;
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }
