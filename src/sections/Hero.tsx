@@ -19,7 +19,8 @@ export function Hero() {
           max-md:w-[24rem]
           max-md:h-[8rem]
           max-md:mb-4
-          max-sm:text-center
+          max-sm:text-justify
+          max-sm:hyphens-auto
           max-sm:w-[35rem]
           max-sm:text-base
           max-sm:mb-16
