@@ -21,7 +21,7 @@ export function Civil() {
                   hover:text-blue-dark-sky mt-4 
                   hover:border-blue-dark-sky/100 
                   transition-all 
-                  max-sm:text-base max-xs:text-sm"
+                  max-xs:hidden"
               >
                     Saiba mais <ArrowLineRight />
               </AlertDialogTrigger>
