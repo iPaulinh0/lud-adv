@@ -1,3 +1,4 @@
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogHeader, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLineRight, ShoppingBag } from "phosphor-react";
@@ -23,17 +24,54 @@ export function Consumer() {
               partilha de bens, união estável, <br/>
               casamento e regime de bens...
             </p>
+            
+            <AlertDialog>
+              <AlertDialogTrigger className="font-medium text-indigo-blue flex items-center gap-2 border-b border-blue-dark-sky/0
+                  hover:text-blue-dark-sky mt-4 
+                  hover:border-blue-dark-sky/100 
+                  transition-all 
+                  max-sm:text-base max-xs:text-sm"
+              >
+                    Saiba mais <ArrowLineRight />
+              </AlertDialogTrigger>
+              <AlertDialogContent className="bg-blue-dark-sky border-gray-700">
+                <AlertDialogHeader className="flex flex-row items-center gap-4 text-sand-100"> <ShoppingBag size={32} weight="fill"/> Direito do Consumidor</AlertDialogHeader>
+                <ul className="text-sand-50 font-light flex flex-col gap-2">
+                  <li>Vícios e defeitos de produtos</li>
+                  <Separator />
+                  <li>Práticas comerciais abusivas</li>
+                  <Separator />
+                  <li>Contratos de adesão</li>
+                  <Separator />
+                  <li>Publicidade enganosa</li>
+                  <Separator />
+                  <li>Direito de arrependimento</li>
+                  <Separator />
+                  <li>Cobranças indevidas</li>
+                  <Separator />
+                  <li><button className="underline hover:text-sun-orange" onClick={handleOverbooking}>Overbooking</button> e idenizações</li>
+                  <Separator />
+                  <li>Garantias e trocas</li>
+                  <Separator />
+                  <li>Proteção de dados do consumidor</li>
+                  <Separator />
+                  <li>Atendimento ao cliente e reclamações</li>
+                </ul>
+                <AlertDialogAction className="bg-gradient-to-r from-orange to-sun-orange text-gray-200">Fechar</AlertDialogAction>
+              </AlertDialogContent>
+            </AlertDialog>
+
             <Drawer>
               <DrawerTrigger onClick={() => window.scrollTo({
                 top: 1200,
                 left: 0,
                 behavior: 'smooth'
               })}
-                className="font-medium text-indigo-blue flex items-center gap-2 border-b border-blue-dark-sky/0
+                className="font-medium text-indigo-blue hidden items-center gap-2 border-b border-blue-dark-sky/0
                   hover:text-blue-dark-sky mt-4 
                   hover:border-blue-dark-sky/100 
                   transition-all 
-                  max-sm:text-base max-xs:text-sm max-xs:mt-1">Saiba mais <ArrowLineRight />
+                  max-sm:text-base max-xs:text-sm max-xs:mt-1 max-xs:flex">Saiba mais <ArrowLineRight />
                 </DrawerTrigger>
                 <DrawerContent className="h-[calc(100vh-7.5rem)] bg-blue-night/95 backdrop-blur-sm border-gray-800 px-5">
           	      <div className="flex items-center gap-4 mt-10 justify-center">
