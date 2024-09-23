@@ -15,7 +15,7 @@ export function Footer() {
           <a href="#">
             <InstagramLogo weight='fill' size={35} className='text-sand-100'/>
           </a>
-          <a href="#">
+          <a href="https://dm.wa.link/59sl5s" target='_blank'>
             <WhatsappLogo weight='fill' size={35} className='text-sand-100'/>
           </a>
         </nav>
