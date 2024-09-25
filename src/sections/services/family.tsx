@@ -57,14 +57,17 @@ export function Family() {
             </AlertDialog>
 
             <Drawer>
-              <DrawerTrigger onClick={() => window.scroll(0,0)}
+              <DrawerTrigger onClick={() => window.scroll({
+                top: 950,
+                left: 0,
+              })}
                 className="font-medium text-indigo-blue hidden items-center gap-2 border-b border-blue-dark-sky/0
                   hover:text-blue-dark-sky mt-4 
                   hover:border-blue-dark-sky/100 
                   transition-all 
                   max-sm:text-base max-xs:text-sm max-xs:mt-1 max-xs:flex">Saiba mais <ArrowLineRight />
                 </DrawerTrigger>
-                <DrawerContent className="h-[calc(100vh-7.5rem)] bg-blue-night/95 backdrop-blur-sm border-gray-800 px-5">
+                <DrawerContent className="h-[calc(100vh-7.5rem)] bg-blue-night backdrop-blur-sm border-gray-800 px-5">
           	      <div className="flex items-center gap-4 mt-10 justify-center">
                     <Users weight="fill" size={48} className="text-sand-50"/>
                     <p className="text-sand-50 text-xl font-semibold">Direito de Família</p>
