@@ -17,11 +17,11 @@ export function Header() {
         </PopoverTrigger>
 
         <PopoverContent className='flex flex-col justify-center gap-2 bg-blue-night w-32 h-36'>
-          <a href="#home" className='text-sand-50'>Início</a>
+          <a onClick={() => window.scroll({top: 100, left: 0, behavior: 'smooth'})} className='text-sand-50'>Início</a>
           <Separator className='text-sand-50'/>
-          <a href="#services" className='text-sand-50'>Serviços</a>
+          <a onClick={() => window.scroll({top: 800, left: 0, behavior: 'smooth'})} className='text-sand-50'>Serviços</a>
           <Separator className='text-sand-50'/>
-          <a href="#contact" className='text-sand-50'>Contato</a>
+          <a onClick={() => window.scroll({top: 1450, left: 0, behavior: 'smooth'})} className='text-sand-50'>Contato</a>
         </PopoverContent>
       </Popover>
     </div>
