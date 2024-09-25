@@ -18,10 +18,10 @@ export function Contact() {
   
   return(
     <div id="contact" className="flex flex-col mt-16 gap-9 items-center w-screen mb-16">
+       <h1 className="font-bold text-3xl text-gray-200 max-sm:text-xl">ENTRE EM CONTATO</h1>
       <div data-tf-live="01J8DMN2JM8XBVG1WTSYJCHT1J"></div>
-      {/* <h1 className="font-bold text-[2rem] text-gray-200">ENTRE EM CONTATO</h1>
 
-      <form>
+      {/* <form>
         <Inputs type="text" placeholder="Insira seu nome completo" label="Nome" htmlForLabel="name"/>
         <Inputs type="number" placeholder="Número de telefone" label="WhatsApp" htmlForLabel="number"/>
         <Inputs type="email" placeholder="Seu melhor e-mail para contato" label="E-mail" htmlForLabel="email"/>

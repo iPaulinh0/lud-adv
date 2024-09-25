@@ -21,7 +21,7 @@ export function Footer() {
         </nav>
       </div>
 
-      <p className='text-sm text-gray-200 mb-1 max-xs:text-xs max-[450px]:text-[10px]'>Todos os direitos reservados © Ludmila Oliveira Amazonas</p>
+      <p className='text-sm tracking-widest text-gray-200 mb-1 max-xs:text-xs max-[450px]:text-[10px]'>Todos os direitos reservados © Ludmila Oliveira Amazonas</p>
       <p className='text-xs text-gray-200 max-[450px]:text-[10px]'>Criado por <a href="https://www.linkedin.com/in/paulo-victor-208954162/" target='_blank' className='font-bold text-sand-100 hover:underline'>Paulo Victor</a></p>
     </div>
   )

@@ -10,7 +10,7 @@ export function Civil() {
               <Scales weight="fill" className="text-blue-sky text-[80px] max-lg:text-[40px]" />
               <h2 className="font-bold text-xl text-blue-sky uppercase text-center mb-2 tracking-widest max-lg:text-lg max-md:text-base max-xs:text-sm">Direito <br /> Civil</h2>
             </div>
-            <p className="text-base text-blue-sky italic text-center max-w-80 max-lg:text-xs max-sm:text-base max-xs:text-xs max-[890px]:hidden">
+            <p className="text-sm text-blue-sky tracking-wider italic text-center max-w-80 max-lg:text-xs max-sm:text-base max-xs:text-xs max-[890px]:hidden">
               Pensão alimentícia, guarda de filhos, <br/>
               partilha de bens, união estável, <br/>
               casamento e regime de bens...
