@@ -92,7 +92,7 @@ export function Consumer() {
                       <Separator className="text-sand-50" />
                       <li>Garantias e trocas</li>
                       <Separator className="text-sand-50" />
-                      <li>Proteção de daods do consumidor</li>
+                      <li>Proteção de dados do consumidor</li>
                       <Separator className="text-sand-50" />
                       <li>Atendimento ao cliente e reclamações</li>
                     </ul>
