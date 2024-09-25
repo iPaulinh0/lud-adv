@@ -16,7 +16,7 @@ export function Header() {
           <List size={36} className='text-sand-100 focus:hidden'/>
         </PopoverTrigger>
 
-        <PopoverContent className='flex flex-col justify-center gap-2 bg-blue-night w-32 h-36'>
+        <PopoverContent className='flex flex-col justify-center gap-2 bg-blue-night w-32 h-36' align='end'>
           <a onClick={() => window.scroll({top: 100, left: 0, behavior: 'smooth'})} className='text-sand-50'>Início</a>
           <Separator className='text-sand-50'/>
           <a onClick={() => window.scroll({top: 800, left: 0, behavior: 'smooth'})} className='text-sand-50'>Serviços</a>
