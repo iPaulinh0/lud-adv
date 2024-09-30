@@ -21,7 +21,7 @@ export function Footer() {
         </nav>
       </div>
 
-      <p className='text-sm tracking-widest text-gray-200 mb-1 max-xs:text-xs max-[450px]:text-[10px]'>Todos os direitos reservados © Ludmila Oliveira Amazonas</p>
+      <p className='text-sm tracking-widest text-center text-gray-200 mb-1 max-xs:text-xs max-[450px]:text-[10px]'>Todos os direitos reservados © <br /> <a href="https://www.linkedin.com/in/ludmila-oliveira-amazonas-1a022b213/" target='_blank' className='text-sand-100 hover:underline'>Ludmila Oliveira Amazonas | OAB/AM 16.646</a></p>
       <p className='text-xs text-gray-200 max-[450px]:text-[10px]'>Criado por <a href="https://www.linkedin.com/in/paulo-victor-208954162/" target='_blank' className='font-bold text-sand-100 hover:underline'>Paulo Victor</a></p>
     </div>
   )
