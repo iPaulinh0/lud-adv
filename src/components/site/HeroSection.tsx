@@ -49,7 +49,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           alt="Dr. Ludmila Amazonas"
           priority
           sizes="(max-width: 1024px) 60vw, 40vw"
-          className="animate-hero-fade block h-[38vh] max-h-[340px] w-auto max-w-none lg:h-[76vh] lg:max-h-none"
+          className="animate-hero-fade block h-[46vh] max-h-105 w-auto max-w-none lg:h-[76vh] lg:max-h-none"
           style={{
             WebkitMaskImage:
               "linear-gradient(to bottom, transparent 0%, #000 9%, #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
