@@ -11,7 +11,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh overflow-hidden lg:snap-start"
+      className="relative flex min-h-dvh flex-col items-center overflow-hidden px-6 pt-28 pb-14 lg:block lg:px-0 lg:pt-0 lg:pb-0 lg:snap-start"
       style={{
         background: "radial-gradient(120% 90% at 50% 15%, #16202e 0%, #0e131b 55%, #090d13 100%)",
       }}
@@ -25,16 +25,14 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       />
 
       {/* eyebrow */}
-      <Reveal
-        className="absolute top-[clamp(96px,13vh,140px)] right-0 left-0 z-12 text-center"
-      >
+      <Reveal className="relative z-12 text-center lg:absolute lg:top-[clamp(96px,13vh,140px)] lg:right-0 lg:left-0">
         <span className="text-xs tracking-[0.42em] text-gold uppercase">LUDMILA AMAZONAS</span>
       </Reveal>
 
-      {/* headline behind the figure (fusion) */}
-      <div className="pointer-events-none absolute top-[clamp(114px,16vh,180px)] right-0 left-0 z-2 text-center lg:top-[clamp(118px,17vh,180px)]">
+      {/* headline: stacked in normal flow on mobile, fused behind the figure on desktop */}
+      <div className="relative z-2 mt-3 text-center lg:pointer-events-none lg:absolute lg:top-[clamp(118px,17vh,180px)] lg:right-0 lg:left-0 lg:mt-0">
         <h1
-          className="animate-hero-rise m-0 font-serif text-[clamp(42px,9vw,150px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream lg:text-[clamp(50px,10vw,150px)]"
+          className="animate-hero-rise m-0 font-serif text-[clamp(40px,11vw,58px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream lg:text-[clamp(50px,10vw,150px)]"
           style={{ textShadow: "0 6px 50px rgba(9,13,19,.85)" }}
         >
           <span className="block text-cream">Defendendo</span>
@@ -44,14 +42,14 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </h1>
       </div>
 
-      {/* figure */}
-      <div className="pointer-events-none absolute bottom-0 left-1/2 z-5 -translate-x-1/2">
+      {/* figure: a normal, fully unobstructed image on mobile; full-bleed fused figure on desktop */}
+      <div className="relative z-5 mt-6 lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:pointer-events-none">
         <Image
           src={heroPhoto}
           alt="Dr. Ludmila Amazonas"
           priority
-          sizes="(max-width: 768px) 60vw, 40vw"
-          className="animate-hero-fade block h-[68vh] w-auto max-w-none lg:h-[76vh]"
+          sizes="(max-width: 1024px) 60vw, 40vw"
+          className="animate-hero-fade block h-[38vh] max-h-[340px] w-auto max-w-none lg:h-[76vh] lg:max-h-none"
           style={{
             WebkitMaskImage:
               "linear-gradient(to bottom, transparent 0%, #000 9%, #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
@@ -62,19 +60,19 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         />
       </div>
 
-      {/* blend overlay: melts the figure's lower body into the copy zone */}
+      {/* blend overlay: melts the figure's lower body into the copy zone — desktop-only effect */}
       <div
-        className="pointer-events-none absolute right-0 bottom-0 left-0 z-8 h-[42%]"
+        className="pointer-events-none absolute right-0 bottom-0 left-0 z-8 hidden h-[42%] lg:block"
         style={{
           background:
             "linear-gradient(to top, #090d13 0%, rgba(9,13,19,.92) 26%, rgba(9,13,19,.5) 56%, rgba(9,13,19,0) 100%)",
         }}
       />
 
-      {/* foreground copy over the fade */}
+      {/* copy: normal flow below the figure on mobile, floated over the fade on desktop */}
       <Reveal
         delayMs={500}
-        className="absolute right-0 bottom-[clamp(58px,8vh,96px)] left-0 z-10 flex flex-col items-center px-6 text-center"
+        className="relative z-10 mt-7 flex flex-col items-center text-center lg:absolute lg:right-0 lg:bottom-[clamp(58px,8vh,96px)] lg:left-0 lg:mt-0 lg:px-6"
       >
         <p className="m-0 max-w-[540px] text-[clamp(15px,1.2vw,17px)] leading-[1.7] font-light text-cream/82">
           Atuação dedicada em Direito de Família, Direito Penal e Direito do Consumidor — um atendimento humano,
@@ -139,7 +137,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       <button
         onClick={() => onNavigate("sobre")}
         aria-label="Rolar para a próxima seção"
-        className="absolute bottom-4 left-1/2 z-12 flex -translate-x-1/2 cursor-pointer flex-col items-center gap-1.5"
+        className="absolute bottom-4 left-1/2 z-12 hidden -translate-x-1/2 cursor-pointer flex-col items-center gap-1.5 lg:flex"
       >
         <svg width="14" height="20" viewBox="0 0 14 20" fill="none" className="animate-scroll-hint">
           <path d="M7 1v16M1 12l6 6 6-6" stroke="#c6a15b" strokeWidth="1.4" />

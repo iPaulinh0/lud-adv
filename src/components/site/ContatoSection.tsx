@@ -121,20 +121,12 @@ export default function ContatoSection() {
         <div className="flex flex-col items-end gap-3.5">
           <div className="flex gap-5">
             <a
-              href={buildWhatsAppLink()}
+              href={CONTACT.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs tracking-[0.1em] text-cream/60 uppercase transition-colors duration-300 hover:text-gold"
             >
               Instagram
-            </a>
-            <a
-              href={buildWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs tracking-[0.1em] text-cream/60 uppercase transition-colors duration-300 hover:text-gold"
-            >
-              LinkedIn
             </a>
             <a
               href={buildWhatsAppLink()}

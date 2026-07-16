@@ -1,8 +1,9 @@
 export const CONTACT = {
-  whatsappNumber: "5592999999999",
-  whatsappDisplay: "(92) 99999-9999",
+  whatsappNumber: "5592992580401",
+  whatsappDisplay: "(92) 99258-0401",
   location: "Manaus · Amazonas — atendimento com hora marcada",
   defaultMessage: "Olá, Dra. Ludmila! Gostaria de agendar uma consulta.",
+  instagram: "https://www.instagram.com/ludmilaadvocacia",
 };
 
 export function buildWhatsAppLink(message: string = CONTACT.defaultMessage) {

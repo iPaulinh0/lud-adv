@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   title: "Dr. Ludmila Amazonas | Advocacia — Família, Penal e Consumidor",
   description:
     "Atuação dedicada em Direito de Família, Direito Penal e Direito do Consumidor — um atendimento humano, estratégico e absolutamente confidencial. Manaus, Amazonas.",
+  appleWebApp: {
+    title: "Ludmila Amazonas",
+    statusBarStyle: "black-translucent",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0e131b",
 };
 
 export default function RootLayout({
