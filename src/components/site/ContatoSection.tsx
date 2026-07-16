@@ -22,7 +22,7 @@ export default function ContatoSection() {
   };
 
   return (
-    <section id="contato" className="flex min-h-dvh snap-start flex-col bg-ink">
+    <section id="contato" className="flex min-h-dvh flex-col bg-ink lg:snap-start">
       <div className="grid flex-1 grid-cols-1 gap-12 px-6 pt-28 pb-10 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-0 lg:px-[clamp(48px,7vw,110px)] lg:pt-[clamp(90px,10vh,120px)]">
         <div className="lg:pr-15">
           <Reveal as="span" className="block text-xs tracking-[0.4em] text-gold uppercase">

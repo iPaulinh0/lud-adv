@@ -41,9 +41,9 @@ export default function SobreSection() {
   return (
     <section
       id="sobre"
-      className="grid min-h-dvh snap-start grid-cols-1 bg-cream text-charcoal lg:grid-cols-[1fr_1.1fr] lg:items-center"
+      className="grid min-h-dvh grid-cols-1 bg-cream text-charcoal lg:grid-cols-[1fr_1.1fr] lg:items-center lg:snap-start"
     >
-      <div className="relative h-72 px-6 pt-10 sm:h-96 sm:px-8 lg:h-full lg:px-0 lg:py-[clamp(40px,6vh,90px)] lg:pl-[clamp(48px,7vw,110px)]">
+      <div className="relative h-72 px-6 pt-24 sm:h-96 sm:px-8 sm:pt-28 lg:h-full lg:px-0 lg:py-[clamp(40px,6vh,90px)] lg:pl-[clamp(48px,7vw,110px)]">
         <Reveal className="relative h-full border border-charcoal/16">
           <div className="absolute inset-3.5 overflow-hidden">
             <Image

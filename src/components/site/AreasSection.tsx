@@ -5,7 +5,7 @@ export default function AreasSection() {
   return (
     <section
       id="areas"
-      className="flex min-h-dvh snap-start flex-col justify-center bg-ink-2 px-6 py-16 sm:px-8 lg:px-[clamp(48px,7vw,110px)] lg:py-0"
+      className="flex min-h-dvh flex-col justify-center bg-ink-2 px-6 py-16 sm:px-8 lg:snap-start lg:px-[clamp(48px,7vw,110px)] lg:py-0"
     >
       <Reveal className="mx-auto max-w-[640px] text-center">
         <span className="text-xs tracking-[0.4em] text-gold uppercase">Especialidades</span>

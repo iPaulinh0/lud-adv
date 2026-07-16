@@ -46,7 +46,7 @@ export default function LandingPage() {
       <WhatsAppButton />
       <div
         ref={scrollerRef}
-        className="scroller relative h-dvh snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-ink font-sans text-cream [-webkit-overflow-scrolling:touch]"
+        className="scroller relative h-dvh overflow-y-scroll scroll-smooth bg-ink font-sans text-cream [-webkit-overflow-scrolling:touch] lg:snap-y lg:snap-mandatory"
       >
         <HeroSection onNavigate={scrollToSection} />
         <SobreSection />

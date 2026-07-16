@@ -19,7 +19,7 @@ export default function DepoimentosSection() {
   return (
     <section
       id="depoimentos"
-      className="flex min-h-dvh snap-start flex-col items-center justify-center bg-cream px-6 py-16 text-charcoal sm:px-8 lg:px-[clamp(48px,7vw,110px)] lg:py-0"
+      className="flex min-h-dvh flex-col items-center justify-center bg-cream px-6 py-16 text-charcoal sm:px-8 lg:snap-start lg:px-[clamp(48px,7vw,110px)] lg:py-0"
     >
       <Reveal className="text-center">
         <span className="text-xs tracking-[0.4em] text-gold-muted uppercase">Depoimentos</span>

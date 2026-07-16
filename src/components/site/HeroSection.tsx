@@ -11,7 +11,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh snap-start overflow-hidden"
+      className="relative min-h-dvh overflow-hidden lg:snap-start"
       style={{
         background: "radial-gradient(120% 90% at 50% 15%, #16202e 0%, #0e131b 55%, #090d13 100%)",
       }}
@@ -32,9 +32,9 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       </Reveal>
 
       {/* headline behind the figure (fusion) */}
-      <div className="pointer-events-none absolute top-[clamp(118px,17vh,180px)] right-0 left-0 z-2 text-center">
+      <div className="pointer-events-none absolute top-[clamp(114px,16vh,180px)] right-0 left-0 z-2 text-center lg:top-[clamp(118px,17vh,180px)]">
         <h1
-          className="animate-hero-rise m-0 font-serif text-[clamp(50px,10vw,150px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream"
+          className="animate-hero-rise m-0 font-serif text-[clamp(42px,9vw,150px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream lg:text-[clamp(50px,10vw,150px)]"
           style={{ textShadow: "0 6px 50px rgba(9,13,19,.85)" }}
         >
           <span className="block text-cream">Defendendo</span>
@@ -51,7 +51,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           alt="Dr. Ludmila Amazonas"
           priority
           sizes="(max-width: 768px) 60vw, 40vw"
-          className="animate-hero-fade block h-[76vh] w-auto max-w-none"
+          className="animate-hero-fade block h-[68vh] w-auto max-w-none lg:h-[76vh]"
           style={{
             WebkitMaskImage:
               "linear-gradient(to bottom, transparent 0%, #000 9%, #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
