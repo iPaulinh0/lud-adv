@@ -32,7 +32,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       {/* headline: stacked in normal flow on mobile, fused behind the figure on desktop */}
       <div className="relative z-2 mt-2 text-center lg:pointer-events-none lg:absolute lg:top-[clamp(118px,17vh,180px)] lg:right-0 lg:left-0 lg:mt-0">
         <h1
-          className="animate-hero-rise m-0 font-serif text-[clamp(40px,11vw,58px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream lg:text-[clamp(50px,10vw,150px)]"
+          className="animate-hero-rise m-0 font-serif text-[clamp(44px,12vw,62px)] leading-[0.86] font-medium tracking-[-0.02em] text-cream lg:text-[clamp(50px,10vw,150px)]"
           style={{ textShadow: "0 6px 50px rgba(9,13,19,.85)" }}
         >
           <span className="block text-cream">Defendendo</span>
@@ -43,18 +43,18 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       </div>
 
       {/* figure: a normal, fully unobstructed image on mobile; full-bleed fused figure on desktop */}
-      <div className="relative z-5 mt-5 lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:pointer-events-none">
+      <div className="relative z-5 -mt-3 lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:pointer-events-none">
         <Image
           src={heroPhoto}
           alt="Dr. Ludmila Amazonas"
           priority
           sizes="(max-width: 1024px) 62vw, 40vw"
-          className="animate-hero-fade block h-[40vh] max-h-90 w-auto max-w-none lg:h-[76vh] lg:max-h-none"
+          className="animate-hero-fade block h-[44vh] max-h-100 w-auto max-w-none [--fade-top:3%] lg:h-[76vh] lg:max-h-none lg:[--fade-top:9%]"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, #000 9%, #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
+              "linear-gradient(to bottom, transparent 0%, #000 var(--fade-top), #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
             maskImage:
-              "linear-gradient(to bottom, transparent 0%, #000 9%, #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
+              "linear-gradient(to bottom, transparent 0%, #000 var(--fade-top), #000 50%, rgba(0,0,0,.55) 74%, rgba(0,0,0,.18) 88%, transparent 97%)",
             filter: "drop-shadow(0 30px 60px rgba(0,0,0,.55))",
           }}
         />
@@ -83,13 +83,13 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-[3px] bg-gold px-6 py-3 text-[13px] font-bold tracking-[0.14em] text-ink uppercase transition-colors duration-300 hover:bg-gold-light lg:px-8 lg:py-4"
+            className="w-56 rounded-[3px] bg-gold px-6 py-3 text-center text-[13px] font-bold tracking-[0.14em] text-ink uppercase transition-colors duration-300 hover:bg-gold-light lg:w-64 lg:px-8 lg:py-4"
           >
             Agendar Consulta
           </a>
           <button
             onClick={() => onNavigate("sobre")}
-            className="cursor-pointer rounded-[3px] border border-cream/32 px-6 py-3 text-[13px] font-medium tracking-[0.14em] text-cream uppercase backdrop-blur-sm transition-colors duration-300 hover:border-gold hover:text-gold lg:px-7 lg:py-4"
+            className="w-56 cursor-pointer rounded-[3px] border border-cream/32 px-6 py-3 text-center text-[13px] font-bold tracking-[0.14em] text-cream uppercase backdrop-blur-sm transition-colors duration-300 hover:border-gold hover:text-gold lg:w-64 lg:px-8 lg:py-4"
           >
             Conheça Ludmila
           </button>
