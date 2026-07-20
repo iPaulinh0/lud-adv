@@ -18,9 +18,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Ludmila Amazonas | Advocacia — Família, Penal e Consumidor",
+  title: "Ludmila Amazonas | Advocacia — Família, Consumidor e Consultivo para Mulheres",
   description:
-    "Atuação dedicada em Direito de Família, Direito Penal e Direito do Consumidor — um atendimento humano, estratégico e absolutamente confidencial. Manaus, Amazonas.",
+    "Atuação dedicada em Direito de Família, Direito do Consumidor e Consultivo para Mulheres — um atendimento humano, estratégico e absolutamente confidencial. Manaus, Amazonas.",
   appleWebApp: {
     title: "Ludmila Amazonas",
     statusBarStyle: "black-translucent",

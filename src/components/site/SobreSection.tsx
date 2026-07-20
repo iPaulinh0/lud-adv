@@ -48,7 +48,7 @@ export default function SobreSection() {
           <div className="absolute inset-3.5 overflow-hidden">
             <Image
               src={aboutPhoto}
-              alt="Dra. Ludmila Amazonas"
+              alt="Ludmila Amazonas"
               fill
               sizes="(max-width: 1024px) 90vw, 45vw"
               className="object-cover"
@@ -75,7 +75,7 @@ export default function SobreSection() {
           delayMs={200}
           className="m-0 mt-6 max-w-[520px] text-base leading-[1.8] text-charcoal/72"
         >
-          A Dra. Ludmila Amazonas constrói sua atuação sobre escuta atenta, técnica apurada e defesa incansável dos
+          Ludmila Amazonas constrói sua atuação sobre escuta atenta, técnica apurada e defesa incansável dos
           interesses de cada cliente. Com pós-graduação em Direito de Família, dedica-se a transformar questões
           delicadas em soluções sólidas e humanas.
         </Reveal>

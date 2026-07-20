@@ -46,7 +46,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       <div className="relative z-5 -mt-3 lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 lg:pointer-events-none">
         <Image
           src={heroPhoto}
-          alt="Dr. Ludmila Amazonas"
+          alt="Ludmila Amazonas"
           priority
           sizes="(max-width: 1024px) 62vw, 40vw"
           className="animate-hero-fade block h-[44vh] max-h-100 w-auto max-w-none [--fade-top:3%] lg:h-[76vh] lg:max-h-none lg:[--fade-top:9%]"
@@ -75,8 +75,8 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         className="relative z-10 mt-5 flex flex-col items-center text-center lg:absolute lg:right-0 lg:bottom-[clamp(58px,8vh,96px)] lg:left-0 lg:mt-0 lg:px-6"
       >
         <p className="m-0 max-w-[540px] text-[clamp(15px,1.2vw,17px)] leading-[1.7] font-light text-cream/82">
-          Atuação dedicada em Direito de Família, Direito Penal e Direito do Consumidor — um atendimento humano,
-          estratégico e absolutamente confidencial.
+          Atuação dedicada em Direito de Família, Direito do Consumidor e Consultivo para Mulheres — um atendimento
+          humano, estratégico e absolutamente confidencial.
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-3 lg:mt-7 lg:gap-4">
           <a

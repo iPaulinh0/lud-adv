@@ -2,7 +2,7 @@ export const CONTACT = {
   whatsappNumber: "5592992580401",
   whatsappDisplay: "(92) 99258-0401",
   location: "Manaus · Amazonas — atendimento com hora marcada",
-  defaultMessage: "Olá, Dra. Ludmila! Gostaria de agendar uma consulta.",
+  defaultMessage: "Olá, Ludmila! Gostaria de agendar uma consulta.",
   instagram: "https://www.instagram.com/ludmilaadvocacia",
 };
 
@@ -43,9 +43,9 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Técnica, discreta e sempre acessível. Senti que meu caso era realmente prioridade. Fez toda a diferença na minha defesa.",
+      "Técnica, discreta e sempre acessível. Senti que meu caso era realmente prioridade. Me orientou com clareza num momento muito delicado da minha vida.",
     name: "A. Ferreira",
-    role: "Direito Penal",
+    role: "Consultivo para Mulheres",
   },
 ];
 
@@ -53,16 +53,40 @@ export const AREAS = [
   {
     numeral: "I",
     title: "Direito de Família",
-    desc: "Divórcio, guarda, pensão, inventário e união estável conduzidos com sensibilidade e rigor técnico.",
+    desc: "Divórcio, guarda, pensão, reconhecimento de união estável e alimentos conduzidos com sensibilidade e rigor técnico.",
+    services: [
+      "Divórcio consensual – mesmo advogado",
+      "Divórcio consensual – Adv. diferentes",
+      "Definição ou alteração de Guarda",
+      "Alimentos (arbitramento, exoneração e revisional)",
+      "Execução de alimentos – rito prisional",
+      "Execução de Alimentos – rito expropriatório",
+      "Regulamentação de Visita",
+      "Reconhecimento, inclusive pós mortem",
+      "Dissolução de União Estável Consensual",
+      "Dissolução de União Estável Litigiosa",
+    ],
   },
   {
     numeral: "II",
-    title: "Direito Penal",
-    desc: "Defesa criminal estratégica em todas as instâncias, com acompanhamento próximo e sigiloso.",
+    title: "Direito do Consumidor",
+    desc: "Proteção dos seus direitos frente a empresas, cobranças indevidas e relações de consumo abusivas.",
+    services: [
+      "Empréstimo consignado não reconhecido",
+      "RMC/RCC",
+      "Negativação indevida",
+      "Falha na prestação do serviço",
+      "Overbooking",
+    ],
   },
   {
     numeral: "III",
-    title: "Direito do Consumidor",
-    desc: "Proteção dos seus direitos frente a empresas, cobranças indevidas e relações de consumo abusivas.",
+    title: "Consultivo para Mulheres",
+    desc: "Orientação estratégica e acolhedora para mulheres em momentos de decisão delicados.",
+    services: [
+      "Consulta pré-divórcio",
+      "Orientação antes de sair de casa",
+      "Orientação sobre guarda, provas e rotina dos filhos",
+    ],
   },
 ];

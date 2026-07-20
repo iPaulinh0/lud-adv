@@ -15,7 +15,7 @@ export default function ContatoSection() {
     const tel = phoneRef.current?.value ?? "";
     const caso = caseRef.current?.value ?? "";
     const msg =
-      `Olá, Dra. Ludmila! Meu nome é ${nome || "[nome]"}.` +
+      `Olá, Ludmila! Meu nome é ${nome || "[nome]"}.` +
       (tel ? ` Telefone: ${tel}.` : "") +
       (caso ? ` Sobre o caso: ${caso}` : " Gostaria de agendar uma consulta.");
     window.open(buildWhatsAppLink(msg), "_blank", "noopener,noreferrer");
@@ -109,9 +109,9 @@ export default function ContatoSection() {
 
       <footer className="flex flex-wrap items-end justify-between gap-8 border-t border-gold/16 px-6 py-9 sm:px-8 lg:px-[clamp(48px,7vw,110px)]">
         <div>
-          <div className="font-serif text-xl text-cream">Dr. Ludmila Amazonas</div>
+          <div className="font-serif text-xl text-cream">Ludmila Amazonas</div>
           <div className="mt-2 text-xs tracking-[0.14em] text-gold uppercase">
-            família · penal · consumidor
+            família · consumidor · mulher
           </div>
           <p className="m-0 mt-4 max-w-[520px] text-xs leading-[1.7] font-light text-cream/45">
             Este site tem caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB
@@ -137,7 +137,7 @@ export default function ContatoSection() {
               WhatsApp
             </a>
           </div>
-          <div className="text-[11px] text-cream/35">© 2026 Dr. Ludmila Amazonas · Todos os direitos reservados</div>
+          <div className="text-[11px] text-cream/35">© 2026 Ludmila Amazonas · Todos os direitos reservados</div>
         </div>
       </footer>
     </section>

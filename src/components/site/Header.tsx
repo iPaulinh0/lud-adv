@@ -24,10 +24,10 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
         className="flex cursor-pointer flex-col text-left leading-none"
       >
         <span className="font-serif text-lg font-semibold tracking-wide text-cream sm:text-xl lg:text-[23px]">
-          Dr. Ludmila Amazonas
+          Ludmila Amazonas
         </span>
         <span className="mt-1 text-[9px] tracking-[0.34em] text-gold uppercase sm:text-[10px]">
-          família · penal&nbsp;<span className="tracking-[3.4px]">·</span>&nbsp;consumidor
+          família · consumidor&nbsp;<span className="tracking-[3.4px]">·</span>&nbsp;mulher
         </span>
       </button>
 

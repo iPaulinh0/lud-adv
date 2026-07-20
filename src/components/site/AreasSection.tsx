@@ -1,7 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "./Reveal";
-import { AREAS, buildWhatsAppLink } from "@/lib/content";
+import AreaModal from "./AreaModal";
+import { AREAS } from "@/lib/content";
 
 export default function AreasSection() {
+  const [activeArea, setActiveArea] = useState<(typeof AREAS)[number] | null>(null);
+
   return (
     <section
       id="areas"
@@ -16,22 +22,26 @@ export default function AreasSection() {
           <Reveal
             key={a.numeral}
             delayMs={i * 100}
-            className="rounded-[3px] border border-gold/16 bg-ink-3 px-8 py-9 pb-8 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,.25)]"
+            onClick={() => setActiveArea(a)}
+            className="cursor-pointer rounded-[3px] border border-gold/16 bg-ink-3 px-8 py-9 pb-8 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,.25)]"
           >
             <span className="font-serif text-4xl leading-none text-gold">{a.numeral}</span>
             <h3 className="mt-5 font-serif text-2xl font-semibold text-cream">{a.title}</h3>
             <p className="mt-3.5 text-[14.5px] leading-[1.7] font-light text-cream/60">{a.desc}</p>
-            <a
-              href={buildWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block border-b border-gold/40 pb-1 text-xs tracking-[0.14em] text-gold uppercase"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveArea(a);
+              }}
+              className="mt-6 inline-block cursor-pointer border-b border-gold/40 pb-1 text-xs tracking-[0.14em] text-gold uppercase"
             >
               Consultar →
-            </a>
+            </button>
           </Reveal>
         ))}
       </div>
+
+      <AreaModal area={activeArea} onClose={() => setActiveArea(null)} />
     </section>
   );
 }
