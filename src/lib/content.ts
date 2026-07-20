@@ -4,6 +4,7 @@ export const CONTACT = {
   location: "Manaus · Amazonas — atendimento com hora marcada",
   defaultMessage: "Olá, Ludmila! Gostaria de agendar uma consulta.",
   instagram: "https://www.instagram.com/ludmilaadvocacia",
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSccgtstPOQ4EffUbEQ0OiJQmpwzMBHXDUuTi59OLFsJIqYizA/viewform",
 };
 
 export function buildWhatsAppLink(message: string = CONTACT.defaultMessage) {

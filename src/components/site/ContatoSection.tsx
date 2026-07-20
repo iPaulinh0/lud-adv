@@ -1,26 +1,7 @@
-"use client";
-
-import { useRef } from "react";
 import Reveal from "./Reveal";
 import { CONTACT, buildWhatsAppLink } from "@/lib/content";
 
 export default function ContatoSection() {
-  const nameRef = useRef<HTMLInputElement | null>(null);
-  const phoneRef = useRef<HTMLInputElement | null>(null);
-  const caseRef = useRef<HTMLTextAreaElement | null>(null);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const nome = nameRef.current?.value ?? "";
-    const tel = phoneRef.current?.value ?? "";
-    const caso = caseRef.current?.value ?? "";
-    const msg =
-      `Olá, Ludmila! Meu nome é ${nome || "[nome]"}.` +
-      (tel ? ` Telefone: ${tel}.` : "") +
-      (caso ? ` Sobre o caso: ${caso}` : " Gostaria de agendar uma consulta.");
-    window.open(buildWhatsAppLink(msg), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="contato" className="flex min-h-dvh flex-col bg-ink lg:snap-start">
       <div className="grid flex-1 grid-cols-1 gap-12 px-6 pt-28 pb-10 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-0 lg:px-[clamp(48px,7vw,110px)] lg:pt-[clamp(90px,10vh,120px)]">
@@ -42,7 +23,7 @@ export default function ContatoSection() {
             delayMs={200}
             className="m-0 mt-5.5 max-w-[440px] text-base leading-[1.8] font-light text-cream/66"
           >
-            Preencha o formulário e receba um retorno pelo WhatsApp. Todo atendimento é sigiloso.
+            Preencha o formulário e entraremos em contato o quanto antes. Todo atendimento é sigiloso.
           </Reveal>
           <Reveal delayMs={300} className="mt-9 flex flex-col gap-4.5">
             <a
@@ -66,44 +47,27 @@ export default function ContatoSection() {
         </div>
 
         <Reveal
-          as="form"
           delayMs={200}
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4.5 rounded-[3px] border border-gold/18 bg-ink-4 p-7 sm:p-9"
+          className="flex flex-col items-start gap-5 rounded-[3px] border border-gold/18 bg-ink-4 p-7 sm:p-9"
         >
+          <span className="flex h-11 w-11 items-center justify-center rounded-[3px] border border-gold/40 text-xl text-gold">
+            ✎
+          </span>
           <div>
-            <label className="text-[11px] tracking-[0.16em] text-cream/50 uppercase">Nome</label>
-            <input
-              ref={nameRef}
-              type="text"
-              placeholder="Seu nome completo"
-              className="mt-2 w-full border-0 border-b border-cream/20 bg-transparent py-2.5 text-[15px] text-cream outline-none focus:border-gold"
-            />
+            <h3 className="m-0 font-serif text-xl text-cream">Agende sua consulta</h3>
+            <p className="m-0 mt-2.5 text-[15px] leading-[1.7] font-light text-cream/66">
+              Preencha o formulário com alguns detalhes do seu caso e entraremos em contato o quanto antes. Leva
+              menos de 2 minutos.
+            </p>
           </div>
-          <div>
-            <label className="text-[11px] tracking-[0.16em] text-cream/50 uppercase">Telefone</label>
-            <input
-              ref={phoneRef}
-              type="tel"
-              placeholder="(92) 90000-0000"
-              className="mt-2 w-full border-0 border-b border-cream/20 bg-transparent py-2.5 text-[15px] text-cream outline-none focus:border-gold"
-            />
-          </div>
-          <div>
-            <label className="text-[11px] tracking-[0.16em] text-cream/50 uppercase">Descrição do caso</label>
-            <textarea
-              ref={caseRef}
-              rows={3}
-              placeholder="Conte brevemente como posso ajudar"
-              className="mt-2 w-full resize-none border-0 border-b border-cream/20 bg-transparent py-2.5 text-[15px] text-cream outline-none focus:border-gold"
-            />
-          </div>
-          <button
-            type="submit"
-            className="mt-2 cursor-pointer rounded-[3px] border-0 bg-gold py-4 text-[13px] font-bold tracking-[0.14em] text-ink uppercase transition-colors duration-300 hover:bg-gold-light"
+          <a
+            href={CONTACT.formUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 w-full rounded-[3px] bg-gold py-4 text-center text-[13px] font-bold tracking-[0.14em] text-ink uppercase transition-colors duration-300 hover:bg-gold-light"
           >
-            Enviar pelo WhatsApp
-          </button>
+            Preencher Formulário
+          </a>
         </Reveal>
       </div>
 
