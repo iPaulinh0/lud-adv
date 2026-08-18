@@ -1,43 +1,8 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import aboutPhoto from "@/assets/images/about.jpg";
 import Reveal from "./Reveal";
-import { COUNTER_TARGETS } from "@/lib/content";
 
 export default function SobreSection() {
-  const countersRef = useRef<HTMLDivElement | null>(null);
-  const [counts, setCounts] = useState(() => COUNTER_TARGETS.map(() => 0));
-  const done = useRef(false);
-
-  useEffect(() => {
-    const el = countersRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !done.current) {
-            done.current = true;
-            const start = performance.now();
-            const duration = 1500;
-            const tick = (now: number) => {
-              const p = Math.min(1, (now - start) / duration);
-              const eased = 1 - Math.pow(1 - p, 3);
-              setCounts(COUNTER_TARGETS.map((c) => Math.round(c.target * eased)));
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-            io.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.35 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
   return (
     <section
       id="sobre"
@@ -66,9 +31,7 @@ export default function SobreSection() {
           delayMs={100}
           className="m-0 mt-4 font-serif text-[clamp(34px,3.6vw,54px)] leading-[1.08] font-medium text-charcoal"
         >
-          Compromisso com a
-          <br />
-          justiça e com você
+          Conheça Ludmila
         </Reveal>
         <Reveal
           as="p"
@@ -78,25 +41,6 @@ export default function SobreSection() {
           Ludmila Amazonas constrói sua atuação sobre escuta atenta, técnica apurada e defesa incansável dos
           interesses de cada cliente. Com pós-graduação em Direito de Família, dedica-se a transformar questões
           delicadas em soluções sólidas e humanas.
-        </Reveal>
-
-        <Reveal delayMs={300} className="mt-11 border-t border-charcoal/14 pt-8">
-          <div ref={countersRef} className="grid grid-cols-3 gap-5">
-            {COUNTER_TARGETS.map((c, i) => {
-              const value = c.pad ? String(counts[i]).padStart(2, "0") : String(counts[i]);
-              return (
-                <div key={c.label}>
-                  <div className="font-serif text-[clamp(38px,3.8vw,54px)] leading-none text-charcoal">
-                    {value}
-                    {c.suffix}
-                  </div>
-                  <div className="mt-2 text-xs font-semibold tracking-[0.14em] text-gold-muted uppercase">
-                    {c.label}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </Reveal>
       </div>
     </section>

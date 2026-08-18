@@ -7,7 +7,6 @@ import WhatsAppButton from "./WhatsAppButton";
 import HeroSection from "./HeroSection";
 import SobreSection from "./SobreSection";
 import AreasSection from "./AreasSection";
-import DepoimentosSection from "./DepoimentosSection";
 import ContatoSection from "./ContatoSection";
 import type { SectionId } from "@/lib/content";
 
@@ -51,7 +50,6 @@ export default function LandingPage() {
         <HeroSection onNavigate={scrollToSection} />
         <SobreSection />
         <AreasSection />
-        <DepoimentosSection />
         <ContatoSection />
       </div>
     </>

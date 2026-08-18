@@ -14,16 +14,14 @@ export default function ContatoSection() {
             delayMs={100}
             className="m-0 mt-4 font-serif text-[clamp(34px,3.8vw,56px)] leading-[1.08] font-medium"
           >
-            Vamos conversar
-            <br />
-            sobre o seu caso
+            Entre em contato
           </Reveal>
           <Reveal
             as="p"
             delayMs={200}
             className="m-0 mt-5.5 max-w-[440px] text-base leading-[1.8] font-light text-cream/66"
           >
-            Preencha o formulário e entraremos em contato o quanto antes. Todo atendimento é sigiloso.
+            Preencha o formulário e entraremos em contato o quanto antes.
           </Reveal>
           <Reveal delayMs={300} className="mt-9 flex flex-col gap-4.5">
             <a
@@ -54,7 +52,7 @@ export default function ContatoSection() {
             ✎
           </span>
           <div>
-            <h3 className="m-0 font-serif text-xl text-cream">Agende sua consulta</h3>
+            <h3 className="m-0 font-serif text-xl text-cream">Formulário de Contato</h3>
             <p className="m-0 mt-2.5 text-[15px] leading-[1.7] font-light text-cream/66">
               Preencha o formulário com alguns detalhes do seu caso e entraremos em contato o quanto antes. Leva
               menos de 2 minutos.
@@ -75,7 +73,7 @@ export default function ContatoSection() {
         <div>
           <div className="font-serif text-xl text-cream">Ludmila Amazonas</div>
           <div className="mt-2 text-xs tracking-[0.14em] text-gold uppercase">
-            família · consumidor · mulher
+            civil · família · consumidor · mulher
           </div>
           <p className="m-0 mt-4 max-w-[520px] text-xs leading-[1.7] font-light text-cream/45">
             Este site tem caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB

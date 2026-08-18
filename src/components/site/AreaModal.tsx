@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { buildWhatsAppLink, type AREAS } from "@/lib/content";
-
-type Area = (typeof AREAS)[number];
+import { toast } from "sonner";
+import { buildWhatsAppLink, type Area } from "@/lib/content";
 
 type AreaModalProps = {
   area: Area | null;
@@ -51,10 +50,24 @@ export default function AreaModal({ area, onClose }: AreaModalProps) {
             <span className="text-xs tracking-[0.3em] text-gold uppercase">Serviços</span>
             <h3 className="mt-3 pr-10 font-serif text-2xl font-semibold text-cream sm:text-3xl">{area.title}</h3>
             <ul className="mt-6 flex flex-col gap-3 border-t border-gold/14 pt-6">
-              {area.services.map((service) => (
-                <li key={service} className="flex items-start gap-3 text-[15px] leading-[1.6] text-cream/80">
+              {area.services?.map((service) => (
+                <li key={service.label} className="flex items-start gap-3 text-[15px] leading-[1.6] text-cream/80">
                   <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
-                  {service}
+                  {service.info ? (
+                    <button
+                      onClick={() =>
+                        toast(service.label, {
+                          description: service.info,
+                          duration: 12000,
+                        })
+                      }
+                      className="cursor-pointer text-left text-gold underline decoration-gold/40 underline-offset-2 transition-colors duration-300 hover:text-gold-light"
+                    >
+                      {service.label}
+                    </button>
+                  ) : (
+                    <span>{service.label}</span>
+                  )}
                 </li>
               ))}
             </ul>

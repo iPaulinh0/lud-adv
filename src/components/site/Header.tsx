@@ -10,6 +10,7 @@ type HeaderProps = {
 
 export default function Header({ activeSection, onNavigate }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isFloating = activeSection !== "hero";
 
   const handleNavigate = (id: SectionId) => {
     onNavigate(id);
@@ -18,21 +19,35 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
 
   return (
     <>
-    <header className="fixed top-0 right-0 left-0 z-60 flex items-center justify-between border-b border-gold/16 bg-ink/55 px-6 py-5 backdrop-blur-md sm:px-8 lg:px-12">
+    <header
+      className={`fixed left-1/2 z-60 flex -translate-x-1/2 items-center justify-between transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        isFloating
+          ? "top-4 w-[min(94%,1160px)] rounded-full border border-gold/25 bg-ink/85 px-5 py-3 shadow-[0_14px_40px_rgba(0,0,0,.45)] backdrop-blur-lg sm:px-7"
+          : "top-0 w-full rounded-none border-b border-gold/16 bg-ink/55 px-6 py-5 backdrop-blur-md sm:px-8 lg:px-12"
+      }`}
+    >
       <button
         onClick={() => handleNavigate("hero")}
         className="flex cursor-pointer flex-col text-left leading-none"
       >
-        <span className="font-serif text-lg font-semibold tracking-wide text-cream sm:text-xl lg:text-[23px]">
+        <span
+          className={`font-serif font-semibold tracking-wide text-cream transition-all duration-500 ${
+            isFloating ? "text-base sm:text-lg" : "text-lg sm:text-xl lg:text-[23px]"
+          }`}
+        >
           Ludmila Amazonas
         </span>
-        <span className="mt-1 text-[9px] tracking-[0.34em] text-gold uppercase sm:text-[10px]">
-          família · consumidor&nbsp;<span className="tracking-[3.4px]">·</span>&nbsp;mulher
+        <span
+          className={`hidden overflow-hidden text-[9px] tracking-[0.34em] text-gold uppercase transition-all duration-500 sm:block sm:text-[10px] ${
+            isFloating ? "mt-0 max-h-0 opacity-0" : "mt-1 max-h-4 opacity-100"
+          }`}
+        >
+          civil · família · consumidor&nbsp;<span className="tracking-[3.4px]">·</span>&nbsp;mulher
         </span>
       </button>
 
       {/* Desktop nav */}
-      <nav className="hidden items-center gap-8 lg:flex">
+      <nav className={`hidden items-center transition-all duration-500 lg:flex ${isFloating ? "gap-6" : "gap-8"}`}>
         {SECTIONS.map((id) => {
           const isActive = id === activeSection;
           return (
@@ -51,9 +66,11 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           href={buildWhatsAppLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-[3px] border border-gold px-5 py-2.5 text-xs font-semibold tracking-[0.12em] text-gold uppercase transition-colors duration-300 hover:bg-gold hover:text-ink"
+          className={`rounded-full border border-gold font-semibold whitespace-nowrap text-gold uppercase transition-all duration-300 hover:bg-gold hover:text-ink ${
+            isFloating ? "px-4 py-2 text-[11px] tracking-[0.06em]" : "rounded-[3px] px-5 py-2.5 text-xs tracking-[0.08em]"
+          }`}
         >
-          Agendar
+          Entre em contato
         </a>
       </nav>
 
@@ -63,9 +80,9 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           href={buildWhatsAppLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-[3px] border border-gold px-4 py-2 text-[11px] font-semibold tracking-[0.1em] text-gold uppercase transition-colors duration-300 hover:bg-gold hover:text-ink"
+          className="rounded-[3px] border border-gold px-3 py-2 text-[10px] font-semibold tracking-[0.04em] whitespace-nowrap text-gold uppercase transition-colors duration-300 hover:bg-gold hover:text-ink"
         >
-          Agendar
+          Entre em contato
         </a>
         <button
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
